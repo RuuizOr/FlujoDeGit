@@ -1,15 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flujo de Git</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-    <h1>Proyecto Flujo de Git</h1>
+    <header>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#misiones">Misiones</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
 
+    <main>
+        <section id="inicio">
+            <h1>Proyecto Flujo de Git</h1>
+            <p>Actividad de misiones con HTML, CSS y JavaScript.</p>
+        </section>
+
+        <section id="misiones">
+            <h2>Misiones</h2>
+            <p>Aquí se desarrollarán las diferentes misiones del proyecto.</p>
+
+            <div id="caos">
+                <h3>Misión: El Botón del Caos</h3>
+                <button id="btn-caos">Botón del caos</button>
+            </div>
+            
+        </section>
+
+        <section id="contacto">
+            <h2>Formulario Absurdo</h2>
+
+            <form id="form-absurdo">
+                <label for="mascota">Nombre de tu mascota imaginaria:</label>
+                <input type="text" id="mascota" name="mascota" placeholder="Ej. Sr. Bigotes III" required>
+
+                <label for="reflejo">¿Cuántas veces le hablaste a tu reflejo esta semana?</label>
+                <input type="number" id="reflejo" name="reflejo" min="0" max="999" required>
+
+                <label for="sospecha">Nivel de sospecha hacia las palomas:</label>
+                <input type="range" id="sospecha" name="sospecha" min="0" max="10" value="5">
+                <span id="valor-sospecha">5</span>
+
+                <label for="excusa">Tu excusa favorita para llegar tarde:</label>
+                <select id="excusa" name="excusa" required>
+                    <option value="">-- Elige una --</option>
+                    <option value="portal">Me tragó un portal dimensional</option>
+                    <option value="gato">Mi gato exigió una junta urgente</option>
+                    <option value="calcetin">Perdí un calcetín y el mundo se detuvo</option>
+                    <option value="wifi">El wifi de mi vecino me hipnotizó</option>
+                </select>
+
+                <label for="lunes">Color oficial de los lunes:</label>
+                <input type="color" id="lunes" name="lunes" value="#808080">
+
+                <button type="submit">Enviar disparate</button>
+            </form>
+
+            <div id="resultado"></div>
+        </section>
+
+<section id="mision-cartas">
+    <h2>Baraja de Git</h2>
+    <p class="mesa-bajada">Seis comandos repartidos boca abajo. Voltea uno para ver de qué es capaz.</p>
+
+    <button type="button" id="mezclar">Revolver la baraja</button>
+    <p id="aviso" role="status" aria-live="polite"></p>
+
+    <ul id="baraja">
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina negra">A <span class="palo">&spades;</span></span>
+                        <code class="comando">git branch</code>
+                        <span class="efecto">Abre una línea de tiempo paralela donde puedes equivocarte en privado.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina roja">K <span class="palo">&hearts;</span></span>
+                        <code class="comando">git commit</code>
+                        <span class="efecto">Guarda una foto de tu trabajo. La descripción es para tu yo del futuro.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina roja">Q <span class="palo">&diams;</span></span>
+                        <code class="comando">git merge</code>
+                        <span class="efecto">Une dos ramas. Si ambas tocaron la misma línea, aparece el conflicto.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina negra">J <span class="palo">&clubs;</span></span>
+                        <code class="comando">git rebase</code>
+                        <span class="efecto">Reescribe el historial para que parezca que siempre supiste lo que hacías.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina negra">10 <span class="palo">&spades;</span></span>
+                        <code class="comando">git stash</code>
+                        <span class="efecto">Esconde los cambios sin comprometerte a nada. Después te acuerdas.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina roja">9 <span class="palo">&hearts;</span></span>
+                        <code class="comando">git revert</code>
+                        <span class="efecto">Deshace un commit creando otro. Nadie borra evidencia aquí.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+    </ul>
+</section>
+    </main>
+
+    <footer id="footer-id"></footer>
     <script src="js/script.js"></script>
 </body>
 </html>
