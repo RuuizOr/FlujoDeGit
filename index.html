@@ -66,6 +66,94 @@
 
             <div id="resultado"></div>
         </section>
+
+<section id="mision-cartas">
+    <h2>Baraja de Git</h2>
+    <p class="mesa-bajada">Seis comandos repartidos boca abajo. Voltea uno para ver de qué es capaz.</p>
+
+    <button type="button" id="mezclar">Revolver la baraja</button>
+    <p id="aviso" role="status" aria-live="polite"></p>
+
+    <ul id="baraja">
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina negra">A <span class="palo">&spades;</span></span>
+                        <code class="comando">git branch</code>
+                        <span class="efecto">Abre una línea de tiempo paralela donde puedes equivocarte en privado.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina roja">K <span class="palo">&hearts;</span></span>
+                        <code class="comando">git commit</code>
+                        <span class="efecto">Guarda una foto de tu trabajo. La descripción es para tu yo del futuro.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina roja">Q <span class="palo">&diams;</span></span>
+                        <code class="comando">git merge</code>
+                        <span class="efecto">Une dos ramas. Si ambas tocaron la misma línea, aparece el conflicto.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina negra">J <span class="palo">&clubs;</span></span>
+                        <code class="comando">git rebase</code>
+                        <span class="efecto">Reescribe el historial para que parezca que siempre supiste lo que hacías.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina negra">10 <span class="palo">&spades;</span></span>
+                        <code class="comando">git stash</code>
+                        <span class="efecto">Esconde los cambios sin comprometerte a nada. Después te acuerdas.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+
+        <li class="hueco">
+            <button type="button" class="carta" aria-pressed="false">
+                <span class="carta-interior">
+                    <span class="cara reverso" aria-hidden="true"><span class="sello">git</span></span>
+                    <span class="cara frente">
+                        <span class="esquina roja">9 <span class="palo">&hearts;</span></span>
+                        <code class="comando">git revert</code>
+                        <span class="efecto">Deshace un commit creando otro. Nadie borra evidencia aquí.</span>
+                    </span>
+                </span>
+            </button>
+        </li>
+    </ul>
+</section>
     </main>
 
     <script src="js/script.js"></script>
