@@ -22,7 +22,6 @@ const frasesFooter = [
 ];
 
 const cambiarColoryFraseEnElFooter = () => {
-    // Lógica para cambiar el color y la frase en el footer de forma aleatoria
     const footer = document.getElementById("footer-id");
     footer.style.minHeight = "100px"; 
     footer.style.display = "flex";
