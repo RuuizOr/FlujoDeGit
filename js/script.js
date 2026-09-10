@@ -44,3 +44,10 @@ if (form) {
         `;
     });
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const boton = document.getElementById("btn-caos");
+
+    boton.addEventListener("click", () => {
+        boton.style.backgroundColor = "red";
+    });
+});
