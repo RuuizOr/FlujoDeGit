@@ -56,6 +56,52 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* ===== Formulario absurdo (Misión 3) ===== */
+
+#form-absurdo {
+    background-color: #2a2a40;
+    color: #f0f0f0;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 320px;
+    margin: 40px auto;
+}
+
+#form-absurdo label {
+    font-size: 14px;
+}
+
+#form-absurdo input,
+#form-absurdo select,
+#form-absurdo button {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+}
+
+#form-absurdo button {
+    background-color: #ffb703;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#form-absurdo button:hover {
+    background-color: #fb8500;
+}
+
+#resultado {
+    margin: 0 auto 40px auto;
+    background-color: #2a2a40;
+    color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 320px;
+    white-space: pre-line;
 #btn-caos {
     padding: 1rem 2rem;
     font-size: 1.1rem;
@@ -65,4 +111,5 @@ h2 {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
 }
