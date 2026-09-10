@@ -18,12 +18,16 @@ const frasesFooter = [
     "Explora nuestro botón del caos.",
     "Gracias por visitarnos.",
     "¡Disfruta de tu experiencia!",
-    "No nos mande a extra profe, porfa"
+    "No nos mande a extra profe, porfa :b"
 ];
 
 const cambiarColoryFraseEnElFooter = () => {
     // Lógica para cambiar el color y la frase en el footer de forma aleatoria
     const footer = document.getElementById("footer-id");
+    footer.style.minHeight = "100px"; 
+    footer.style.display = "flex";
+    footer.style.justifyContent = "center";
+    footer.style.alignItems = "center";
 
     const randomIndexTexto = Math.floor(Math.random() * frasesFooter.length);
     footer.style.backgroundColor = colorFooter[randomIndexTexto];
@@ -31,7 +35,7 @@ const cambiarColoryFraseEnElFooter = () => {
 
     let randomIndexColor = Math.floor(Math.random() * colorFooter.length);
     footer.style.backgroundColor = colorFooter[randomIndexColor];
-
-    console.log("Color y frase del footer cambiados.");
 };
+
+cambiarColoryFraseEnElFooter();
 
