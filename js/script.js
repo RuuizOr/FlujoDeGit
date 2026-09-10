@@ -11,3 +11,10 @@ enlaces.forEach((enlace) => {
         console.log("Navegando a: " + enlace.textContent);
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const boton = document.getElementById("btn-caos");
+
+    boton.addEventListener("click", () => {
+        boton.style.backgroundColor = "red";
+    });
+});
