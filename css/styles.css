@@ -55,3 +55,14 @@ h1,
 h2 {
     margin-bottom: 20px;
 }
+
+#btn-caos {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1f1147;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
