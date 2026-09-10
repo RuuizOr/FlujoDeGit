@@ -1,4 +1,3 @@
-// ===== Navegación (Misión 1) =====
 const enlaces = document.querySelectorAll("nav a");
 
 enlaces.forEach((enlace) => {
@@ -13,7 +12,6 @@ enlaces.forEach((enlace) => {
     });
 });
 
-// ===== Formulario absurdo (Misión 3) =====
 const form = document.getElementById("form-absurdo");
 
 if (form) {
@@ -51,3 +49,39 @@ document.addEventListener("DOMContentLoaded", () => {
         boton.style.backgroundColor = "red";
     });
 });
+const baraja = document.getElementById("baraja");
+const botonMezclar = document.getElementById("mezclar");
+const aviso = document.getElementById("aviso");
+
+if (baraja && botonMezclar) {
+    baraja.addEventListener("click", (e) => {
+        const carta = e.target.closest(".carta");
+
+        if (!carta) return;
+
+        const volteada = carta.classList.toggle("volteada");
+        carta.setAttribute("aria-pressed", volteada);
+    });
+    botonMezclar.addEventListener("click", () => {
+        const huecos = Array.from(baraja.children);
+
+        baraja.querySelectorAll(".carta").forEach((carta) => {
+            carta.classList.remove("volteada");
+            carta.setAttribute("aria-pressed", "false");
+        });
+
+        for (let i = huecos.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [huecos[i], huecos[j]] = [huecos[j], huecos[i]];
+        }
+
+        baraja.classList.add("mezclando");
+        baraja.addEventListener("animationend", () => {
+            baraja.classList.remove("mezclando");
+        }, { once: true });
+
+        huecos.forEach((hueco) => baraja.appendChild(hueco));
+
+        aviso.textContent = "Baraja revuelta. Las " + huecos.length + " cartas están boca abajo.";
+    });
+}
