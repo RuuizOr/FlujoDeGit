@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flujo de Git</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <h1>Proyecto Flujo de Git</h1>
+    <h1>Formulario Absurdo</h1>
+
+    <form id="form-absurdo">
+        <label for="mascota">Nombre de tu mascota imaginaria:</label>
+        <input type="text" id="mascota" name="mascota" placeholder="Ej. Sr. Bigotes III" required>
+
+        <label for="reflejo">¿Cuántas veces le hablaste a tu reflejo esta semana?</label>
+        <input type="number" id="reflejo" name="reflejo" min="0" max="999" required>
+
+        <label for="sospecha">Nivel de sospecha hacia las palomas:</label>
+        <input type="range" id="sospecha" name="sospecha" min="0" max="10" value="5">
+        <span id="valor-sospecha">5</span>
+
+        <label for="excusa">Tu excusa favorita para llegar tarde:</label>
+        <select id="excusa" name="excusa" required>
+            <option value="">-- Elige una --</option>
+            <option value="portal">Me tragó un portal dimensional</option>
+            <option value="gato">Mi gato exigió una junta urgente</option>
+            <option value="calcetin">Perdí un calcetín y el mundo se detuvo</option>
+            <option value="wifi">El wifi de mi vecino me hipnotizó</option>
+        </select>
+
+        <label for="lunes">Color oficial de los lunes:</label>
+        <input type="color" id="lunes" name="lunes" value="#808080">
+
+        <button type="submit">Enviar disparate</button>
+    </form>
+
+    <div id="resultado"></div>
 
     <script src="js/script.js"></script>
 </body>
